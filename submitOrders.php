@@ -20,7 +20,7 @@ function debug_to_console( $data ) {
 
     echo $output;
 }
-
+/*
 function httpPost($data,$url)
 {
 	$ch = curl_init();
@@ -34,8 +34,9 @@ function httpPost($data,$url)
 	curl_close ($ch);
 	return $code;
 }
+*/
 // debug_to_console("JR ORDERS URL:");
-alert($ordersURL);
+// alert($ordersURL);
 
 echo json_encode(array("httpCode" => httpPost($data,$ordersURL), "ordersURL" => $ordersURL));
 
