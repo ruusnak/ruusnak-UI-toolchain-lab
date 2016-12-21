@@ -34,8 +34,8 @@ function httpPost($data,$url)
 	curl_close ($ch);
 	return $code;
 }
-debug_to_console("JR ORDERS URL:");
-debug_to_console($ordersURL);
+// debug_to_console("JR ORDERS URL:");
+alert($ordersURL);
 
 echo json_encode(array("httpCode" => httpPost($data,$ordersURL), "ordersURL" => $ordersURL));
 
