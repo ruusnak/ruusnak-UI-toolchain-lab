@@ -10,7 +10,7 @@ $applicationURI = $application_json["application_uris"][0];
 $ordersHost = substr_replace($applicationURI, $ordersAppName, 0, strlen($applicationName));
 $ordersRoute = "http://" . $ordersHost;
 $ordersURL = $ordersRoute . "/rest/orders";
-$ordersURL = http://jouko.ruuskanen-dev-orders-api-toolchain-lab.mybluemix.net/rest/orders";
+$ordersURL = "http://jouko.ruuskanen-dev-orders-api-toolchain-lab.mybluemix.net/rest/orders";
 
 /*
 function debug_to_console( $data ) {
