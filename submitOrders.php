@@ -10,6 +10,8 @@ $applicationURI = $application_json["application_uris"][0];
 $ordersHost = substr_replace($applicationURI, $ordersAppName, 0, strlen($applicationName));
 $ordersRoute = "http://" . $ordersHost;
 $ordersURL = $ordersRoute . "/rest/orders";
+echo "ORDERS URL:";
+echo $ordersURL:
 
 function httpPost($data,$url)
 {
