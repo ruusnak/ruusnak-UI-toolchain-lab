@@ -10,8 +10,16 @@ $applicationURI = $application_json["application_uris"][0];
 $ordersHost = substr_replace($applicationURI, $ordersAppName, 0, strlen($applicationName));
 $ordersRoute = "http://" . $ordersHost;
 $ordersURL = $ordersRoute . "/rest/orders";
-echo "JR ORDERS URL:";
-echo $ordersURL;
+
+function debug_to_console( $data ) {
+
+    if ( is_array( $data ) )
+        $output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
+    else
+        $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
+
+    echo $output;
+}
 
 function httpPost($data,$url)
 {
@@ -26,6 +34,8 @@ function httpPost($data,$url)
 	curl_close ($ch);
 	return $code;
 }
+debug_to_console("JR ORDERS URL:");
+debug_to_console($ordersURL);
 
 echo json_encode(array("httpCode" => httpPost($data,$ordersURL), "ordersURL" => $ordersURL));
 
