@@ -68,7 +68,8 @@ function orderItem(itemID){
 	    dataType: "json",
 	    success: function( result ) {
 	        if(result.httpCode != "201" && result.httpCode != "200"){
-	        	alert("Failure: check that your JavaOrders API App is running and your user-provided service has the correct URL.");
+	        	alert(result.ordersURL);
+	        	//alert("Failure: check that your JavaOrders API App is running and your user-provided service has the correct URL.");
 	        }
 	        else{
 	        	alert("Order Submitted! Check your Java Orders API to see your orders: \n" + result.ordersURL);
