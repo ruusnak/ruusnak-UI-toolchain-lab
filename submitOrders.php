@@ -12,7 +12,8 @@ $ordersRoute = "http://" . $ordersHost;
 $ordersURL = $ordersRoute . "/rest/orders";
 $ordersURL = str_replace("mybluemix", ".mybluemix", $ordersURL);
 $ordersURL = str_replace(".ruuskanen", "ruuskanen", $ordersURL);
-// $ordersURL = "http://jouko.ruuskanen-dev-orders-api-toolchain-lab.mybluemix.net/rest/orders";
+$ordersURL = $applicationName;
+// $ordersURL = "http://joukoruuskanen-dev-orders-api-toolchain-lab.mybluemix.net/rest/orders";
 
 /*
 function debug_to_console( $data ) {
