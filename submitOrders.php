@@ -11,7 +11,7 @@ $ordersHost = substr_replace($applicationURI, $ordersAppName, 0, strlen($applica
 $ordersRoute = "http://" . $ordersHost;
 $ordersURL = $ordersRoute . "/rest/orders";
 echo "ORDERS URL:";
-echo $ordersURL:
+echo $ordersURL;
 
 function httpPost($data,$url)
 {
