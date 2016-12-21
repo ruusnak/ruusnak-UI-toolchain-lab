@@ -11,6 +11,7 @@ $ordersHost = substr_replace($applicationURI, $ordersAppName, 0, strlen($applica
 $ordersRoute = "http://" . $ordersHost;
 $ordersURL = $ordersRoute . "/rest/orders";
 
+/*
 function debug_to_console( $data ) {
 
     if ( is_array( $data ) )
@@ -20,7 +21,8 @@ function debug_to_console( $data ) {
 
     echo $output;
 }
-/*
+*/
+
 function httpPost($data,$url)
 {
 	$ch = curl_init();
@@ -34,7 +36,7 @@ function httpPost($data,$url)
 	curl_close ($ch);
 	return $code;
 }
-*/
+
 // debug_to_console("JR ORDERS URL:");
 // alert($ordersURL);
 
